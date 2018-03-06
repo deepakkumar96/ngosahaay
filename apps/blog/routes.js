@@ -1,6 +1,6 @@
 var express = require('express'),
-	router  = express.Router(),
-	ctrl	= require('./controllers')
+    router  = express.Router(),
+    ctrl    = require('./controllers')
 
 
 router.get('/', (req, res) => res.render('blog/article'));

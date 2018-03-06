@@ -1,7 +1,7 @@
 var express = require('express'),
-	router  = express.Router(),
-	ctrl	= require('./controllers');
-    users = require('./controllers/users')
+    router  = express.Router(),
+    ctrl    = require('./controllers');
+    users   = require('./controllers/users')
 
 router.get('/register', ctrl.auth.register);
 
