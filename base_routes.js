@@ -8,7 +8,7 @@ var blog    = require('./apps/blog'),
 
 
 router.get('/', (req, res) =>{
-	res.end('Home');
+	res.end('Home!!');
 })
 
 router.use('/blog', blog.routes);
