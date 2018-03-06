@@ -1,0 +1,34 @@
+
+	<body>
+		h1 welcome To NGO Sahay
+    
+	<script>
+
+		var users = {
+			
+			usersData: [
+				{'name': 'Deepak'},
+				{'name': 'Mrinal'},
+				{'name': 'Jerin'},
+			],
+
+			getAll: function(){
+				return usersData;
+			},
+		 
+		    allUsers: function(req, res){
+		    	/*res.write('<ol>');
+		    	for(var usr of usersData){
+		    		res.write('<li>'+usr.name+'</li>');
+		    	}
+		    	res.end('</ol>');*/
+
+				console.log(usersData);
+		    }
+
+		};
+		console.log('data');
+
+		console.log(users.allUsers());
+	</script>
+	</body>

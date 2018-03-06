@@ -1,0 +1,1 @@
+exports.blogctrl = require('./blogctrl')
