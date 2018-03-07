@@ -12,13 +12,13 @@
     <script id="certificate-template" type="text/x-handlebars-template">​
         <ul>
             <li>
-                Ngo Id: {{{tab}}} {{ngoId}}
+                Ngo Id:  {{ngoId}}
             </li>
             <li>
-                Ngo Name: {{{tab}}} {{ngoName}}
+                Ngo Name:  {{ngoName}}
             </li>
             <li>
-                Ngo Formed Date:  {{{tab}}} {{formedDate}} 
+                Ngo Formed Date:  {{formedDate}} 
             </li>
         </ul>
     ​</script>
@@ -31,10 +31,6 @@
             $('#page').append (template (data));
         });
         
-        //additional
-        Handlebars.registerHelper('tab', function() {
-            return '&nbsp; &nbsp; &nbsp; &nbsp;';
-        });
     </script>
 </body>
 </html>
