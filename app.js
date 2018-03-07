@@ -2,14 +2,17 @@ var express = require('express')
   , app = express()
   , bodyParser = require('body-parser')
   , port = process.env.PORT || 8000
+  //, hbs = require('express-hbs'); 
 
 
 /* SETTING TEMPLATE ENGINE */
 
-app.set('views', __dirname + '/views')
-app.engine('jade', require('jade').__express)
-app.set('view engine', 'jade')
 
+//pp.engine('handlebars'); 
+//app.set('view engine', 'hbs');
+//app.engine('hbs', hbs.express4());
+
+app.set('views', __dirname + '/views')
 
 
 /* REGISTERING MIDDLEWARES */

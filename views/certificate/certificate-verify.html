@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="/static/js/handlebars-v4.0.11.js" ></script>
+        <script src="/static/js/jquery-3.3.1.min.js" ></script>
+</head>
+<body>
+
+    <div id="page">
+    </div>
+
+    <script id="certificate-template" type="text/x-handlebars-template">​
+        <ul>
+            <li>
+                Ngo Id: {{{tab}}} {{ngoId}}
+            </li>
+            <li>
+                Ngo Name: {{{tab}}} {{ngoName}}
+            </li>
+            <li>
+                Ngo Formed Date:  {{{tab}}} {{formedDate}} 
+            </li>
+        </ul>
+    ​</script>
+
+    <script>
+        var theTemplateScript = $("#certificate-template").html();
+        var template = Handlebars.compile(theTemplateScript);
+        
+        $.get("/api/certificate/1000", function(data, status){
+            $('#page').append (template (data));
+        });
+        
+        //additional
+        Handlebars.registerHelper('tab', function() {
+            return '&nbsp; &nbsp; &nbsp; &nbsp;';
+        });
+    </script>
+</body>
+</html>
